@@ -9,6 +9,13 @@ var floor;
 var nicePig, badPig;
 var loga, logb, logc, logd;
 var birdd;
+var backgroundImage;
+
+function preload(){
+  backgroundImage = loadImage("sprites/bg.png")
+
+
+}
 
 function setup() {
   createCanvas(1200,400);
@@ -29,7 +36,7 @@ function setup() {
   birdd = new bird(100,100);
 }
 function draw() {
-  background(0,0,255); 
+  background(backgroundImage); 
   Engine.update(engine)
   object.display();
   object2.display();
@@ -44,4 +51,5 @@ function draw() {
   logc.display();
   logd.display();
   birdd.display();
+  birdd.visible = false;
 }
